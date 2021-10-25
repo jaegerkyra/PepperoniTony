@@ -1,10 +1,18 @@
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 //declare variables
 string Input;
 int numPets = 0;
+
+//Random Number Generator
+void randNumGen() {
+    int x = Input.length();
+    x = (x * x) / 2;
+    cout << x << endl;
+    
 
 
 //Function for how Tony reacts to pets
@@ -37,8 +45,16 @@ void petting() {
         }
     }
     else {
-        cout << "Pepperoni Tony: Merrooowwp?" << endl;
-        cout << numPets << endl;
+        randNumGen();
+        if (x < 2) {
+            cout << "Pepperoni Tony: Merrooowwp?" << endl;
+        }
+        else if (x < 4) {
+            cout << "Pepperoni Tony is looking at you." << endl;
+        }
+        else {
+            cout << "Pepperoni Tony yawned." << endl;
+        }
     }
 }
 
